@@ -1,8 +1,12 @@
+
+
+
+
+
 * {
      margin: 0.2em;
     padding: 0;
     box-sizing: border-box;
-      font-family: Garamon;
 }
 @font-face {
     font-family:Garamon;
@@ -21,26 +25,31 @@
     src: url(../assets/fonts/09-100-100-100-blur1.otf) format(opentype);
 }
 
-
-
 body {
-    font-family:Blur1;
     
-   font-weight:lighter;
+font-family:Blur1;
     line-height: 1.6;
-    color: #333;
-    background-color: #502f82;
+    
+    background-color: #473910;
 }
+
 h1{
     font-size: 200px;
-    font-family:Blur2;
-    color: #47a3ff;
     font-weight:lighter;
+    color: #47a3ff;
 }
 
 a {
-    font-size: 150px;
+    font-size: 50px;
     font-family:Blur1;
+    color: #0066cc;
+    text-decoration: none;
+}
+p {
+    font-size: 30px;
+    font-family:Garamon;
+   
+    
     color: #0066cc;
     text-decoration: none;
 }
