@@ -4,7 +4,7 @@
 
 
 * {
-     margin: 0.2em;
+     margin: 0em;
     padding: 0;
     box-sizing: border-box;
 }
@@ -41,7 +41,7 @@ h1{
 
 a {
     font-size: 50px;
-    font-family:Blur1;
+    font-family:Garamon;
     color: #0066cc;
     text-decoration: none;
 }

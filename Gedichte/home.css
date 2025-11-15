@@ -1,0 +1,23 @@
+@font-face {
+    font-family:Garamon;
+}
+body {
+   font-weight:lighter;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+h1{
+    font-size: 200px;
+    font-family:Garamon;
+    color: #000000;
+    font-weight:lighter;
+}
+
+a {
+
+    font-size: 150px;
+    font-family:Garamon;
+    color: #373737;
+    text-decoration: none;
+}

@@ -1,0 +1,86 @@
+* {
+     margin: 0em;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family:Garamon;
+   src: url(../Gedichtssammlungcoupe-/assets/fonts/GARAMOND.4-weit.otf) format(opentype);
+}
+@font-face {
+    font-family:Blur2;
+    src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur2.otf) format(opentype);
+}
+@font-face {
+    font-family:Blur1;
+    src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur1.otf) format(opentype);
+}
+
+
+
+body {
+   font-weight:lighter;
+    line-height: 1.6;
+    color: #8b8b8b;
+    background-color: #000000;
+}
+h1{
+    font-size: 100px;
+    font-family:Garamon;
+    color: #efff9c;
+    font-weight:lighter;
+    
+}
+h1{
+    font-size: 75px;
+    font-family:Garamon;
+    color: #efff9c;
+    font-weight:lighter;
+    
+}
+
+a {
+
+    font-size: 150px;
+    font-family:Garamon;
+    color: #d9ff02;
+    text-decoration: none;
+}
+span {
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+    color: #d9ff02;
+    opacity:0.1;
+    filter:blur(1);
+    position: relative; /* damit span über dem Mond liegt */
+    z-index: 2;
+    transition: color 1s, opacity 0.5s;
+       
+}
+span:hover {
+    color: #d9ff02;
+    font-family: 'Courier New', Courier, monospace;
+    opacity:1;
+    filter:blur(0);
+    font-size: 100px;
+    /* transition bereits oben gesetzt */
+}
+
+/* entferne die alten opacity-Regeln für .Zeile1 und benutze ein Pseudo-Element für das Mondbild */
+.Zeile{
+    position: relative;
+    opacity: 0;
+}
+.Zeile:hover{
+    position: relative;
+    opacity: 1;
+}
+.Image1 {
+    position: absolute;
+    top: 10%;
+    left:50%;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* hinter dem Text */
+}

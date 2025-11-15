@@ -1,42 +1,42 @@
 * {
-     margin: 0.2em;
+     margin: 0.em;
     padding: 0;
     box-sizing: border-box;
       font-family: Garamon;
 }
 @font-face {
     font-family:Garamon;
-   src: url(../assets/fonts/GARAMOND.4-weit.otf) format(opentype);
+   src: url(../Gedichtssammlungcoupe-/assets/fonts/GARAMOND.4-weit.otf) format(opentype);
 }
 @font-face {
     font-family:Blur2;
-    src: url(../assets/fonts/09-100-100-100-blur2.otf) format(opentype);
+    src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur2.otf) format(opentype);
 }
 @font-face {
     font-family:Blur1;
-    src: url(../assets/fonts/09-100-100-100-blur1.otf) format(opentype);
+    src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur1.otf) format(opentype);
 }
 
 
 
 body {
-    font-family:Blur1;
-    
    font-weight:lighter;
     line-height: 1.6;
     color: #333;
-    background-color: #502f82;
+    background-color: #ffffff;
 }
 h1{
     font-size: 200px;
-    font-family:Blur2;
-    color: #47a3ff;
+    font-family:Garamon;
+    color: #404040;
     font-weight:lighter;
 }
 
 a {
+
     font-size: 150px;
-    font-family:Blur1;
-    color: #0066cc;
+    font-family:Garamon;
+    color: #1d1d1d;
     text-decoration: none;
 }
+

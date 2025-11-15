@@ -4,7 +4,7 @@
 
 
 * {
-    margin: 0.2em;
+    margin: 0em;
     padding: 0;
     box-sizing: border-box;
 }
@@ -39,6 +39,12 @@ h1{
     font-weight: lighter;
     font-family:Blur2;
     color: #47a3ff;
+}
+h2{
+    font-size: 100px;
+    font-weight: lighter;
+    font-family:Garamon;
+    color: #ffffff;
 }
 
 a {
