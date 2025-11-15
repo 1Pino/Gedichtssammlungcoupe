@@ -1,0 +1,32 @@
+.mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #000000;
+  border-right: 1px solid #383838;
+  border-top: 1px solid #222222;
+  text-align: center;
+  cursor: move;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 0px;
+    padding-right: 40px;
+}
+
+p {
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.9)
+}
+
+img {
+    transform: scale(2);
+    position: absolute;
+    top: 46%;
+    left: 30%;
+    max-width: 100%;
+    height: auto;
+    
+}
