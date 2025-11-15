@@ -1,5 +1,6 @@
 @font-face {
     font-family:Garamon;
+   src: url(../Gedichtssammlungcoupe-/assets/fonts/GARAMOND.4-weit.otf) format(opentype);
 }
 body {
    font-weight:lighter;
