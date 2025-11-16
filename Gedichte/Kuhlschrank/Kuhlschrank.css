@@ -1,3 +1,10 @@
+@font-face {
+    font-family:Garamon;
+   src: url(../Kuhlschrank/fonts/GARAMOND.4-weit.otf) format(opentype);
+}
+
+
+
 .frame {
     border: 0px solid #000000;
     width: 988px;
@@ -22,7 +29,33 @@
   margin-top: 0px;
     padding-right: 40px;
 }
+a {
+    text-align: left;
+    font-size: 5em;
+    font-family:Garamon;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 0px;
+}
+a:hover {
+    text-align: left;
+    font-size: 5em;
+    font-family:Garamon;
+    color: #282121;
+    text-decoration: none;
+    letter-spacing: 50px;
+    transition: 1s;
 
+}
+a:active {
+    text-align: left;
+    font-size: 5em;
+    font-family:Garamon;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0px;
+    transition: 1s;
+}
 p {
     font-size: 10px;
     font-family:'Courier New', Courier, monospace;
@@ -104,5 +137,9 @@ top: -10px;
         display: none; 
     opacity:0;
     }
+    a {
+        display: none;
+        opacity:0;
 
+}
 }
