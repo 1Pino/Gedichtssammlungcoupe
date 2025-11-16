@@ -27,4 +27,15 @@ divs.forEach(div => {
         document.onmouseup = null;
         document.onmousemove = null;
     }
+
+
+    
+    const buttonDrucken = document.querySelector(".drucken");
+    buttonDrucken.addEventListener("click", () => {
+        window.print();
+        // Nach Print-Dialog schließen (funktioniert nur nach Bestätigung durch User)
+        window.addEventListener('afterprint', () => {
+            console.log('Drucken abgeschlossen');
+        });
+    });
 });
