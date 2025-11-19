@@ -30,6 +30,8 @@ divs.forEach(div => {
 
 
     
+
+});
     const buttonDrucken = document.querySelector(".drucken");
     buttonDrucken.addEventListener("click", () => {
         window.print();
@@ -38,4 +40,3 @@ divs.forEach(div => {
             console.log('Drucken abgeschlossen');
         });
     });
-});
