@@ -1,0 +1,120 @@
+.body1{
+    background-image: url('../Fließband/fließbandLANG.png');
+    background-size: cover;
+    
+    height: 100vh; /* Viewport-Höhe, nicht 12000px */
+    width: 1500px;
+    overflow: hidden; /* versteckt alles, was überläuft */
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: auto; /* nicht 200% */
+        mix-blend-mode: difference;
+    animation: scroll 20s linear infinite; /* Animation hierher */
+}
+@keyframes scroll {
+    0% { transform: translateY(1000px); }
+    100% { transform: translateY(-650vh); /* scroll nach unten um eine Viewport-Höhe */ }
+}
+* {
+    margin: 0em;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.zeile{
+    position: relative;
+    left: 10%;
+    line-height: 200px;
+
+   
+
+}
+
+.zeile:nth-child(n) {
+    transform: translateY(50px) ;
+}
+
+
+.span{
+    font-size: 40px;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    -webkit-text-stroke: rgb(0, 0, 0) 0.5px;
+    transition:0.5s;
+
+}
+.span:hover{
+    font-size: 200px;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    -webkit-text-stroke: rgb(0, 0, 0) 0.5px;
+}
+
+.Zeile1{
+    position: relative;
+    opacity: 1;
+    height:30px;
+    color:#d9ff00!important;
+}
+
+
+
+header {
+    background-color: #ffffff;
+    margin-left: 0px;
+    text-align: left;
+
+    width: 100%;
+    display: relative;            /* neue Zeile: Flex-Layout */
+     
+    align-items: center;
+    gap: 1rem;                /* Abstand zwischen Links anpassen */
+    overflow-x: auto;         /* falls zu viele Links vorhanden sind */
+}
+
+header p {
+    display: relative; /* oder: display:flex; align-items:center; */
+    width: auto;           /* wichtig: nicht 100% */
+    text-align: left;
+    text-justify: inter-word;
+    text-align-last: auto;
+    align-items: center;
+    -moz-text-align-last: auto;
+    letter-spacing: 0px; /* nach Bedarf anpassen */
+    white-space: nowrap;   /* verhindert Zeilenumbruch innerhalb des Links */
+}
+
+.links {
+    position: absolute;
+    left: 50px;
+}
+.mitte {
+    position: absolute;
+    left: 10%;
+}
+.rechts {
+    position: absolute;
+    right: 50px;
+}
+
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:Garamon;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}

@@ -2,6 +2,86 @@
     font-family:Garamon;
    src: url(../Kuhlschrank/fonts/GARAMOND.4-weit.otf) format(opentype);
 }
+/* 
+body{
+    background-image: url(https://cdn.idealo.com/folder/Product/201823/2/201823254/s1_produktbild_max_4/ok-ofk-121-d.jpg);
+    background-size: cover;
+} */
+
+header {
+    background-color: #ffffff;
+    margin-left: 0px;
+    text-align: left;
+
+    width: 100%;
+    display: relative;            /* neue Zeile: Flex-Layout */
+     
+    align-items: center;
+    gap: 1rem;                /* Abstand zwischen Links anpassen */
+    overflow-x: auto;         /* falls zu viele Links vorhanden sind */
+}
+
+header p {
+    display: relative; /* oder: display:flex; align-items:center; */
+    width: auto;           /* wichtig: nicht 100% */
+    text-align: left;
+    text-justify: inter-word;
+    text-align-last: auto;
+    align-items: center;
+    -moz-text-align-last: auto;
+    letter-spacing: 0px; /* nach Bedarf anpassen */
+    white-space: nowrap;   /* verhindert Zeilenumbruch innerhalb des Links */
+}
+
+.links {
+    position: absolute;
+    left: 50px;
+}
+.mitte {
+    position: absolute;
+    left: 10%;
+}
+.rechts {
+    position: absolute;
+    right: 50px;
+}
+
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:Garamon;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
+a:hover {
+    text-align: justify;
+    font-size: 1em;
+    font-family:Garamon;
+    color: #282121;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 1s;
+    filter: blur(0px);
+
+}
+a:active {
+    text-align: justify;
+    font-size: 1em;
+    font-family:Garamon;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 10px;
+    transition: 1s;
+}
+
+.Zeile{
+    position: relative;
+    opacity: 1;
+    height:30px;
+    color:#d9ff00!important;
+}
 
 
 
@@ -29,7 +109,7 @@
   margin-top: 0px;
     padding-right: 40px;
 }
-a {
+/* a {
     text-align: left;
     font-size: 5em;
     font-family:Garamon;
@@ -55,7 +135,7 @@ a:active {
     text-decoration: none;
     letter-spacing: 0px;
     transition: 1s;
-}
+} */
 p {
     font-size: 10px;
     font-family:'Courier New', Courier, monospace;
