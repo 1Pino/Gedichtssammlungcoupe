@@ -2,36 +2,50 @@
     font-family:Garamon;
    src: url(../assets/fonts/GARAMOND.4-weit.otf) format(opentype);
 }
+@font-face {
+    font-family:W9;
+   src: url(../assets/fonts/HiraginoSans-W9.otf) format(truetype);
+}
+@font-face {
+    font-family:W6;
+   src: url(../assets/fonts/HiraginoSans-W6.otf) format(truetype);
+}
+@font-face {
+    font-family:W3;
+   src: url(../assets/fonts/HiraginoSans-W3.otf) format(truetype);
+}
 body {
    font-weight:lighter;
     line-height: 1.6;
-    color: #333;
+
     background-color: #ffffff;
-    width: 200vw;
+    width: 100%;
     height: 100vh;
 }
 h1{
-    font-size: 200px;
-    font-family:Garamon;
+    font-size: 100px;
+    font-family:W3;
     color: #000000;
-    font-weight:lighter;
+    margin-top:0px;
+    text-align:center;
+    width:100vw;
 }
 
 a {
     text-align: center;
     font-size: 5em;
-    font-family:Garamon;
+    font-family:W3;
     color: #373737;
     text-decoration: none;
-    letter-spacing: 0px;
+    letter-spacing: 10px;
 }
 a:hover {
     text-align: center;
     font-size: 5em;
-    font-family:Garamon;
+    font-family:W6;
     color: #282121;
     text-decoration: none;
-    letter-spacing: 50px;
+    letter-spacing: -9px;
     transition: 1s;
 
 }
@@ -41,9 +55,195 @@ a:active {
     font-family:Garamon;
     color: #ffffff;
     text-decoration: none;
-    letter-spacing: 0px;
+    letter-spacing: 5px;
     transition: 1s;
 }
+
+
+
+a .reveal {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 50%;
+  left: 55%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+       font-size: 1px;
+    transition: opacity 0.3s , font-size 2s;
+    letter-spacing: 0px;
+    text-align: left;
+}
+a:hover .reveal {
+  opacity: 1;
+  z-index: 9999; /* über alles drüber legen */
+    font-size: 15px;   
+}
+
+
+a .reveal-1 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 18%;
+  left: 70%;
+  width: 350px;
+    font-size: 1px;
+     transition: opacity 0.3s , font-size 2s;
+
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-1 {
+  opacity: 1;
+    font-size: 15px;
+    letter-spacing: 0px;
+    font-family: W3;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+a .reveal-2 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 60%;
+  left: 80%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+     transition: opacity 0.3s , font-size 2s;
+    font-size: 1px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-2 {
+  opacity: 1;
+    font-size: 15px;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+
+
+a .reveal-3 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 90%;
+  left: 70%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+    transition: opacity 0.3s , font-size 2s;
+    font-size: 1px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-3 {
+  opacity: 1;
+  
+  font-size: 15px;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+
+
+
+a .reveal-4 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 50%;
+  left: 60%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+    transition: opacity 0.3s , font-size 2s;
+    font-size: 1px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-4 {
+  opacity: 1;
+  
+  font-size: 15px;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+
+
+
+
+a .reveal-5 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 50%;
+  left: 80%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+    transition: opacity 0.3s , font-size 2s;
+    font-size: 1px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-5 {
+  opacity: 1;
+  
+  font-size: 15px;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+a .reveal-6 {
+  opacity: 0;
+  pointer-events: none; /* existiert für die maus nicht */
+  position: fixed;  /* bezieht sich auf seite position */
+  top: 60%;
+  left: 65%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+    transition: opacity 0.3s , font-size 2s;
+    font-size: 1px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+a:hover .reveal-6 {
+  opacity: 1;
+  
+  font-size: 15px;
+  z-index: 9999; /* über alles drüber legen */
+}
+
+
+
+
+
+
+
+span {
+    font-family:W3;
+    color: #000000;
+    position: fixed;
+}
+
+
 p {
 
     font-size: 5em;
@@ -62,6 +262,7 @@ p:hover {
 .container{
     position:absolute;
 }
+
 .eins{
     top:30%;
     left:50%;

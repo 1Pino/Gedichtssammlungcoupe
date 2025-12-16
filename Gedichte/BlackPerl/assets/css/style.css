@@ -4,44 +4,81 @@
 }
 
 
-header {
-    background-color: #ffffff;
-    margin-left: 0px;
-    text-align: left;
 
-    width: 100%;
-    display: relative;            /* neue Zeile: Flex-Layout */
-     
-    align-items: center;
-    gap: 1rem;                /* Abstand zwischen Links anpassen */
-    overflow-x: auto;         /* falls zu viele Links vorhanden sind */
+.Zeile1{
+    position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:1472px;
+    color:#d9ff00!important;
+    background-color: #ffffff!important;
 }
 
-/* entferne width:100% aus header a und setze inline-block / keine Blockbreite */
-header a {
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: absolute;
+    background-color: #ffffff;
+    width:100%;
+  
+
+
+}
+
+header p {
     display: relative; /* oder: display:flex; align-items:center; */
-    width: auto;           /* wichtig: nicht 100% */
+
     text-align: left;
     text-justify: inter-word;
     text-align-last: auto;
     align-items: center;
     -moz-text-align-last: auto;
-    letter-spacing: 10px; /* nach Bedarf anpassen */
+    letter-spacing: 0px; /* nach Bedarf anpassen */
     white-space: nowrap;   /* verhindert Zeilenumbruch innerhalb des Links */
 }
 
-.links {
-    position: absolute;
-    left: 50px;
+@font-face {
+    font-family: 'W3';
+    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
-.mitte {
-    position: absolute;
-    left: 10%;
+
+h1{
+    font-size: 25px;
+    font-family:W3;
+    color: #000000;
+    margin-top:0px;
+    text-align:center;
+
 }
-.rechts {
-    position: absolute;
-    right: 50px;
-}
+
+
+
+
+
+
+
 
 a {
     text-align: justify;
@@ -231,7 +268,7 @@ p {
 
 .fontswitcher {
     font-family: url('../fonts/Nocturnal.otf');
-    margin-top: 100px;
+    padding-top: 100px;
 
 }
 
