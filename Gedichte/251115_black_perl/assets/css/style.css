@@ -19,7 +19,7 @@ justify-content: space-between;
 align-items: center;
     opacity: 1;
     height:40px;
-    width:1472px;
+    width:100%;
   
     background-color: #ffffff!important;
 }
@@ -49,6 +49,7 @@ header {
     width:100%;
     font-family: W3;
     top:0px;
+    left:0%;
   
 
 

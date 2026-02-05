@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Schluckgedicht Interaktiv</title>
+<style>
+body {
+  margin: 0;
+  background: #0c0c0c;
+  color: #e6e6e6;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+#poem {
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.line {
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  position: relative;
+  transition: opacity 0.8s ease, transform 1s ease, letter-spacing 1s ease;
+}
+
+.line.active {
+  opacity: 1;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
+}
+
+
+.Zeile1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:100%;
+    color:#000000!important;
+    background-color: #ffffff!important;
+}
+
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: fixed;
+    background-color: #ffffff;
+    width:100%;
+    top: 0%;
+}
+h3{
+    font-family: 'W3';
+    font-size: 25px;
+    color: #000000;
+    margin-top:20px;
+ 
+}
+@font-face {
+    font-family: 'W3';
+    src: url('/Gedichtssammlungcoupe-/assets/fonts/HiraginoSans-W3.otf') ;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="Zeile1">
+<div class="links"><a href="../home.html">←</a> </div>
+<div class="mitte"><h3 href="../home.html">Gedichtsammlung</h3></div>
+
+<div class="rechts"><a href="../251115_black_perl/index.html">→</a></div>
+</div>
+
+</header>
+
+<div id="poem">
+  <div class="line active">Ich schluckte einen eisernen Mond</div>
+  <div class="line">Sie nennen es eine Schraube</div>
+  <div class="line">Ich schluckte die Fabrikabwässer</div>
+  <div class="line">Die Arbeitslosenpapiere</div>
+  <div class="line">Die Jugend, vor die Maschinen gebückt</div>
+  <div class="line">Stirbt vor ihrer Zeit</div>
+  <div class="line">Ich schluckte die Schufterei</div>
+  <div class="line">Ich schluckte das verrostete Leben</div>
+  <div class="line">Jetzt kriege ich nichts mehr runter</div>
+  <div class="line">Alles, was ich geschluckt habe</div>
+  <div class="line">Quillt aus meinem Rachen hervor</div>
+  <div class="line">Ergießt sich über dem Land meiner Vorfahren</div>
+  <div class="line">In ein schändliches Gedicht.</div>
+</div>
+
+<script>
+const lines = [...document.querySelectorAll('.line')];
+let current = 0;
+let chaoticLetters = [];
+
+// Buchstaben vorbereiten mit Abständen zwischen Wörtern
+lines.forEach((line, idx) => {
+  line.dataset.idx = idx;
+  const text = line.textContent;
+  line.dataset.originalText = text;
+  line.dataset.originalLetterSpacing = getComputedStyle(line).letterSpacing;
+  line.dataset.originalTransform = getComputedStyle(line).transform;
+  line.textContent = '';
+
+  const words = text.split(' ');
+  words.forEach((word, wIdx) => {
+    for (const ch of word) {
+      const span = document.createElement('span');
+      span.textContent = ch;
+      span.className = 'letter';
+      line.appendChild(span);
+    }
+    if (wIdx < words.length - 1) {
+      const space = document.createElement('span');
+      space.textContent = ' '; 
+      space.style.marginRight = '0.1em'; // Abstand zwischen Wörtern
+      line.appendChild(space);
+    }
+  });
+});
+
+// Funktion zum Schlucken der Zeile
+function swallowLine(line) {
+  const letters = [...line.children];
+  const rect = line.getBoundingClientRect();
+  const bottomY = window.innerHeight * 0.9;
+
+  line.style.transform = `translateY(${bottomY - rect.top}px)`;
+  line.style.letterSpacing = '-0.8em';
+  line.style.pointerEvents = 'none';
+
+  setTimeout(() => {
+    letters.forEach(letter => {
+      const clone = letter.cloneNode(true);
+      document.body.appendChild(clone);
+      clone.style.position = 'fixed';
+      const rectLetter = letter.getBoundingClientRect();
+      clone.dataset.origLeft = rectLetter.left;
+      clone.dataset.origTop = rectLetter.top;
+      clone.style.left = rectLetter.left + 'px';
+      clone.style.top = rectLetter.top + 'px';
+      clone.style.opacity = 1;
+
+      const x = Math.random() * 400 - 200;
+      const y = Math.random() * 100 - 50;
+      const r = (Math.random() - 0.5) * 360;
+      const s = 0.8 + Math.random() * 0.4;
+
+      clone.style.transition = `${1 + Math.random()}s ease`;
+      requestAnimationFrame(() => {
+        clone.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg) scale(${s})`;
+      });
+
+      chaoticLetters.push(clone);
+    });
+
+    current++;
+    if (current < lines.length) {
+      lines[current].classList.add('active');
+    }
+  }, 600);
+}
+
+// Klick auf aktive Zeile
+lines.forEach((line, index) => {
+  line.addEventListener('click', () => {
+    if (index === current) {
+      if (line.dataset.originalText === 'Quillt aus meinem Rachen hervor') {
+        chaoticLetters.forEach(clone => {
+          const origLeft = parseFloat(clone.dataset.origLeft);
+          const origTop = parseFloat(clone.dataset.origTop);
+
+          const rectClone = clone.getBoundingClientRect();
+          const deltaX = origLeft - rectClone.left;
+          const deltaY = origTop - rectClone.top;
+
+          // Bewegung zurück + langsam ausblenden
+          clone.style.transition = 'transform 1s ease, opacity 1s ease';
+          clone.style.transform = `translate(${deltaX}px, ${deltaY}px) rotate(0deg) scale(1)`;
+          clone.style.opacity = 0;
+
+          setTimeout(() => clone.remove(), 1000);
+        });
+        chaoticLetters = [];
+
+        // Zeilen selbst zurücksetzen
+        lines.forEach(l => {
+          l.style.transition = 'transform 1s ease, letter-spacing 1s ease, opacity 1s ease';
+          l.style.transform = l.dataset.originalTransform;
+          l.style.letterSpacing = l.dataset.originalLetterSpacing;
+          l.style.pointerEvents = 'auto';
+          l.style.opacity = 1;
+        });
+
+        current = 0;
+        lines.forEach(l => l.classList.remove('active'));
+        lines[0].classList.add('active');
+      } else {
+        swallowLine(line);
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

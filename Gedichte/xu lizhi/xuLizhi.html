@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gedichteband - Quentin Pino</title>
-    <link rel="stylesheet" href="xuLizhi.css">
+    <link rel="stylesheet" href="xuLizhi.css" id="css_file">
 </head>
 <header>
 <div class="Zeile1">
 <div class="links"><a href="../Kuhlschrank/Kuhlschrank.html">←</a></div>
 <div class="mitte"><h3 href="/Gedichte/home.html">Gedichtsammlung</h3></div>
+
 <div class="rechts"><a href="../251115_black_perl/index.html">→</a></div>
 </div>
 </header>
@@ -33,5 +34,40 @@
 <div class="Zeile"><div class=Image1><img src="https://img.zeit.de/news/2022-05/01/1500-bei-revolutionaerer-1-mai-demo-in-hamburg-image-group/wide__660x371"></div><span>In</span> <span>ein</span> <span>schändliches</span> <span>Gedicht.</span><br></div>
 
 
+<script>
+//  THEMESWITCHER
+    function switchTheme() {
+      let cssLink = document.getElementById("css_file");
+
+      if (cssLink.getAttribute("href") === "switch.css") {
+        cssLink.setAttribute("href", "xuLizhi.css");
+      } else {
+        cssLink.setAttribute("href", "switch.css");
+      }
+    }
+</script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+
+//     const themes = [
+//   "xuLizhi.css",
+//   "switch.css",
+ 
+// ];
+
+// let currentTheme = 0;
+
+// function switchTheme() {
+//   const cssLink = document.getElementById("css_file");
+
+//   currentTheme = (currentTheme + 1) % themes.length;
+//   cssLink.setAttribute("href", themes[currentTheme]);
+// }

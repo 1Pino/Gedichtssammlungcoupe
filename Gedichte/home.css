@@ -23,7 +23,7 @@ body {
     height: 100vh;
 }
 h1{
-    font-size: 100px;
+    font-size: 50px;
     font-family:W3;
     color: #000000;
     margin-top:0px;
@@ -52,10 +52,10 @@ a:hover {
 a:active {
     text-align: center;
     font-size: 5em;
-    font-family:Garamon;
+    font-family:W6;
     color: #ffffff;
     text-decoration: none;
-    letter-spacing: 5px;
+    letter-spacing: -40px;
     transition: 1s;
 }
 
@@ -65,11 +65,12 @@ a .reveal {
   opacity: 0;
   pointer-events: none; /* existiert für die maus nicht */
   position: fixed;  /* bezieht sich auf seite position */
-  top: 50%;
-  left: 55%;
-  width: 400px;
+  top: 40%;
+  left: 58%;
+  width: 300px;
   transform: translate(-50%, -50%);
        font-size: 1px;
+  
     transition: opacity 0.3s , font-size 2s;
     letter-spacing: 0px;
     text-align: left;
@@ -135,8 +136,8 @@ a .reveal-3 {
   opacity: 0;
   pointer-events: none; /* existiert für die maus nicht */
   position: fixed;  /* bezieht sich auf seite position */
-  top: 90%;
-  left: 70%;
+  top: 80%;
+  left: 60%;
   width: 200px;
   transform: translate(-50%, -50%);
     transition: opacity 0.3s , font-size 2s;
@@ -162,7 +163,7 @@ a .reveal-4 {
   opacity: 0;
   pointer-events: none; /* existiert für die maus nicht */
   position: fixed;  /* bezieht sich auf seite position */
-  top: 50%;
+  top: 40%;
   left: 60%;
   width: 200px;
   transform: translate(-50%, -50%);
@@ -214,7 +215,7 @@ a .reveal-6 {
   opacity: 0;
   pointer-events: none; /* existiert für die maus nicht */
   position: fixed;  /* bezieht sich auf seite position */
-  top: 60%;
+  top: 50%;
   left: 65%;
   width: 400px;
   transform: translate(-50%, -50%);
@@ -230,6 +231,7 @@ a:hover .reveal-6 {
   font-size: 15px;
   z-index: 9999; /* über alles drüber legen */
 }
+
 
 
 

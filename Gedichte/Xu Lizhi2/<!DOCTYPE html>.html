@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Schluckgedicht Interaktiv</title>
+<style>
+body {
+  margin: 0;
+  background: #0c0c0c;
+  color: #e6e6e6;
+  font-family: "Times New Roman", serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#poem {
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.line {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  transition: transform 1s ease, letter-spacing 1s ease;
+}
+
+.line.active {
+  display: block;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
+}
+</style>
+</head>
+<body>
+
+<div id="poem">
+  <div class="line active">Ich schluckte einen eisernen Mond</div>
+  <div class="line">Sie nennen es eine Schraube</div>
+  <div class="line">Ich schluckte die Fabrikabwässer</div>
+  <div class="line">Die Arbeitslosenpapiere</div>
+  <div class="line">Die Jugend, vor die Maschinen gebückt</div>
+  <div class="line">Stirbt vor ihrer Zeit</div>
+  <div class="line">Ich schluckte die Schufterei</div>
+  <div class="line">Ich schluckte das verrostete Leben</div>
+  <div class="line">Jetzt kriege ich nichts mehr runter</div>
+  <div class="line">Alles, was ich geschluckt habe</div>
+  <div class="line">Quillt aus meinem Rachen hervor</div>
+  <div class="line">Ergießt sich über dem Land meiner Vorfahren</div>
+  <div class="line">In ein schändliches Gedicht.</div>
+</div>
+
+<script>
+const lines = [...document.querySelectorAll('.line')];
+let current = 0;
+
+// Buchstaben vorbereiten
+lines.forEach(line => {
+  const text = line.textContent;
+  line.textContent = '';
+  for (const ch of text) {
+    const span = document.createElement('span');
+    span.textContent = ch;
+    span.className = 'letter';
+    line.appendChild(span);
+  }
+});
+
+function swallowLine(line) {
+  const letters = [...line.children];
+  const rect = line.getBoundingClientRect();
+  const bottomY = window.innerHeight * 0.8; // untere 10% des Bildschirms
+
+  // 1️⃣ Schrift geht nach unten + Laufweite verringern
+  line.style.transform = `translateY(${bottomY - rect.top}px)`;
+  line.style.letterSpacing = '-0.5em';
+
+  // 2️⃣ Nach kurzer Verzögerung: Buchstaben chaotisch verteilen
+  setTimeout(() => {
+    letters.forEach(letter => {
+      const clone = letter.cloneNode(true);
+      document.body.appendChild(clone);
+      clone.style.position = 'fixed';
+      const rectLetter = letter.getBoundingClientRect();
+      clone.style.left = rectLetter.left + 'px';
+      clone.style.top = rectLetter.top + 'px';
+      clone.style.opacity = 1;
+
+      const x = Math.random() * 300 - 100; // +/- 100px
+      const y = Math.random() * 200 - 50;  // +/- 50px
+      const r = (Math.random() - 0.5) * 360;
+
+      clone.style.transition = `${1 + Math.random()}s ease`;
+      requestAnimationFrame(() => {
+        clone.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+      });
+    });
+
+    // Nächste Zeile aktivieren
+    current++;
+    if (current < lines.length) {
+      lines[current].classList.add('active');
+    }
+  }, 600); // kurze Verzögerung, damit die Zeile erst nach unten geht
+}
+
+// Klick auf aktive Zeile
+lines.forEach((line, index) => {
+  line.addEventListener('click', () => {
+    if (index === current) {
+      swallowLine(line);
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -13,8 +13,8 @@
     src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur2.otf) format(opentype);
 }
 @font-face {
-    font-family:Blur1;
-    src: url(../Gedichtssammlungcoupe-/assets/fonts/09-100-100-100-blur1.otf) format(opentype);
+    font-family:W3;
+    src: url(/Gedichtssammlungcoupe-/assets/fonts/HiraginoSans-W3.otf) format(opentype);
 }
 
 
@@ -23,21 +23,21 @@ body {
    font-weight:lighter;
     line-height: 1.6;
 
-    background-color: #51544d;
+    background-color: #ffffff;
     text-align: center;
     
 }
 
 h1{
     font-size: 65px;
-    font-family:'Courier New', Courier, monospace;
-    color: #949f5c;
+    font-family:W3;
+    color: #000000;
     font-weight:lighter;
 }
 h2{
     font-size: 40px;
-    font-family:'Courier New', Courier, monospace;
-    color: #d9ff02; 
+    font-family:W3;
+    color: #000000; 
     font-weight:lighter;
 }
 
@@ -195,44 +195,44 @@ a:active {
 span {
     
     font-size: 30px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:W3;
     
-    opacity:0.2;
+    opacity:1;
     filter:blur(1);
     position: relative; 
     z-index: 2;
     transition: font-size 0.3s;
-    letter-spacing: 10px;
+    letter-spacing: 0px;
       margin-right: 0.2em;
        
 }
-span:hover {
+/* span:hover {
     
     font-family: 'Courier New', Courier, monospace;
     opacity:1;
     filter:blur(0);
     letter-spacing: 15px;
     transition: 1s;
-    -webkit-text-stroke:  #51544d  0.5px;
+    /* -webkit-text-stroke:  #51544d  0.5px;} */
   
-}
+ */
 .Zeile-header{
     position: relative;
     opacity: 1;
     height:30px;
-    color:#d9ff00!important;
+    color:black;
 }
 
 .Zeile{
     position: relative;
     opacity: 1;
 
-    color:#d9ff00!important;
+    color:black;
 }
 .Zeile:hover{
     position: relative;
     opacity: 1;
-     color: #e6ff58!important;
+     color:black;
 
 }
 .Image1 {
@@ -252,7 +252,7 @@ span:hover {
     width: 100%;
     height: auto;
     z-index: 1; /* hinter dem Text */
-    opacity:1;
+    opacity:0;
 }
 .Image2 {
     position: absolute;
@@ -272,7 +272,7 @@ span:hover {
     width: 500px;
     height: auto;
     z-index: 1; /* hinter dem Text */
-    opacity:1;
+    opacity:0;
 }
 
 

@@ -1,0 +1,172 @@
+.body1{
+    /* background-image: url('../Fließband/fließbandLANG.png');
+    background-size: cover; */
+    
+    height: 110vh; /* Viewport-Höhe, nicht 12000px */
+    width: 1500px;
+    overflow: visible; /* versteckt alles, was überläuft */
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 80%;
+    height: auto; /* nicht 200% */
+       
+    animation: scroll 25s linear infinite; /* Animation hierher */
+}
+/* @keyframes scroll {
+    0% { transform: translateY(1000px); }
+    100% { transform: translateY(-650vh); /* scroll nach unten um eine Viewport-Höhe */
+
+* {
+    margin: 0em;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.zeile{
+    position: relative;
+    left: 10%;
+    line-height: 10px;
+
+   
+
+}
+
+/* .zeile:nth-child(n) {
+    transform: translateY(50px) ;
+} */
+
+
+.span{
+    font-size: 30px;
+    font-family:W3;
+    font-weight: bolder;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+    -webkit-text-stroke: rgb(0, 0, 0) 0px;
+    transition:0.5s;
+    
+
+}
+/* .span:hover{
+    font-size: 200px;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: bolder;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+    -webkit-text-stroke: rgb(0, 0, 0) 0.5px;
+} */
+
+
+
+
+.Zeile1{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:100%;
+    color:#000000!important;
+    background-color: #ffffff!important;
+}
+
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: absolute;
+    background-color: #ffffff;
+    width:100%;
+  
+
+
+}
+
+header p {
+    display: relative; /* oder: display:flex; align-items:center; */
+
+    text-align: left;
+    text-justify: inter-word;
+    text-align-last: auto;
+    align-items: center;
+    -moz-text-align-last: auto;
+    letter-spacing: 0px; /* nach Bedarf anpassen */
+    white-space: nowrap;   /* verhindert Zeilenumbruch innerhalb des Links */
+}
+
+@font-face {
+    font-family: 'W3';
+    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
+    
+}
+
+h1{
+    font-size: 65px;
+    font-family:W3;
+    color: #000000;
+    font-weight:lighter;
+}
+h2{
+    font-size: 40px;
+    font-family:W3;
+    color: #000000; 
+    font-weight:lighter;
+}
+h3{
+    font-size: 25px;
+    font-family:W3;
+    color: #000000;
+    margin-top:0px;
+    text-align:center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:Garamon;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
