@@ -8,7 +8,7 @@ body {
   margin: 0;
   background: #0c0c0c;
   color: #e6e6e6;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: W3;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -23,6 +23,7 @@ body {
   width: 80%;
   text-align: center;
   position: relative;
+  height:90%;
 }
 
 .line {
@@ -87,17 +88,29 @@ h3{
     margin-top:20px;
  
 }
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:'W3';
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
 @font-face {
     font-family: 'W3';
-    src: url('/Gedichtssammlungcoupe-/assets/fonts/HiraginoSans-W3.otf') ;
+    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 </style>
 </head>
 <body>
 <header>
 <div class="Zeile1">
-<div class="links"><a href="../home.html">←</a> </div>
-<div class="mitte"><h3 href="../home.html">Gedichtsammlung</h3></div>
+<div class="links"><a href="../index.html">←</a> </div>
+<div class="mitte"><h3 href="../index.html">Gedichtsammlung</h3></div>
 
 <div class="rechts"><a href="../251115_black_perl/index.html">→</a></div>
 </div>
@@ -105,7 +118,10 @@ h3{
 </header>
 
 <div id="poem">
-  <div class="line active">Ich schluckte einen eisernen Mond</div>
+  <div class="line active">Eiserner Mond</div>
+  <div class="line ">Xu Lizhi</div>
+
+  <div class="line ">Ich schluckte einen eisernen Mond</div>
   <div class="line">Sie nennen es eine Schraube</div>
   <div class="line">Ich schluckte die Fabrikabwässer</div>
   <div class="line">Die Arbeitslosenpapiere</div>
@@ -197,7 +213,7 @@ function swallowLine(line) {
 lines.forEach((line, index) => {
   line.addEventListener('click', () => {
     if (index === current) {
-      if (line.dataset.originalText === 'Quillt aus meinem Rachen hervor') {
+      if (line.dataset.originalText === 'In ein schändliches Gedicht.') {
         chaoticLetters.forEach(clone => {
           const origLeft = parseFloat(clone.dataset.origLeft);
           const origTop = parseFloat(clone.dataset.origTop);

@@ -54,6 +54,10 @@ header {
 
 
 }
+a{
+    text-decoration: none;
+    color: #000000;
+}
 h3{
     font-family: 'W3';
     font-size: 25px;

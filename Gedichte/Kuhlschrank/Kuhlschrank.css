@@ -77,32 +77,13 @@ h1{
 a {
     text-align: justify;
     font-size: 1em;
-    font-family:Garamon;
+    font-family:W3;
     color: #373737;
     text-decoration: none;
     letter-spacing: 1px;
     filter: blur(0px);
 }
-a:hover {
-    text-align: justify;
-    font-size: 1em;
-    font-family:Garamon;
-    color: #282121;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: 1s;
-    filter: blur(0px);
 
-}
-a:active {
-    text-align: justify;
-    font-size: 1em;
-    font-family:Garamon;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 10px;
-    transition: 1s;
-}
 
 .Zeile{
     position: relative;
@@ -241,35 +222,44 @@ top: -10px;
     }
 } */
  @media print {
+    .Header {
+        display: none;
+    }
+     .Zeile1{
+        display: none;
+    }
     .frame {
         display: contents;
         border: none;
         width: 100%;
-        height: auto;
+        height: 100%;
         overflow: visible;
         left: 0;
         top: 0;
         position: static;
         page-break-inside: avoid;
-        transform: scaleY(0.95);
+        transform: scaleY(1);
      
      }  
      img {
-    transform: scaleX(1) scaleY(0.85);
+    transform: scaleX(1) scaleY(0.95);
     
     position: absolute;
     top: 0%;
-    left: 0%;
+    left: 3%;
     max-width: 100%;
-    height: auto;
+    height: 100%;
     z-index: 0;
 }
         .container {
+             position: absolute;
+    top: 0%;
+    left: 3%;
             display: block;
         transform: scale(0.7);
         transform-origin: top left; 
         overflow: hidden;
-        page-break-inside: avoid;
+        break-inside: avoid;
     }
     
         .Drucker {

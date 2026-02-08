@@ -51,8 +51,8 @@
     /* animation: scroll 23s linear infinite; */
 }
 @keyframes scroll {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-650vh); /* scroll nach unten um eine Viewport-Höhe */ }
+    0% { transform: translateY(800px); }
+    100% { transform: translateY(-400vh); /* scroll nach unten um eine Viewport-Höhe */ }
 }
 * {
     margin: 0em;
@@ -137,7 +137,7 @@ h3{
     font-family: 'W3';
     font-size: 25px;
     color: #000000;
-    margin-top:20px;
+    margin-top:0px;
  
 }
 
@@ -181,29 +181,10 @@ h3{
     font-size: 25px;
     color: #000000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 a {
     text-align: justify;
     font-size: 1em;
-    font-family:Garamon;
+    font-family:W3;
     color: #373737;
     text-decoration: none;
     letter-spacing: 1px;
@@ -224,7 +205,7 @@ a {
 }
 
 .animate {
-  animation: scroll 25s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 @keyframes PixelGradient {

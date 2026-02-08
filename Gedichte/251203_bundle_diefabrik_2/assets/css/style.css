@@ -70,10 +70,20 @@ h1 {
 p {
     font-size: 1.2rem;
 }
-
-
-
-
+h3{
+    font-family: 'W3';
+    font-size: 25px;
+    color: #000000;
+}
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:W3;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
 
 
 
@@ -212,11 +222,13 @@ p {
 
 
 .Zeile1{
+position: fixed;
+top:0%;
 display: flex;
 justify-content: space-between;
 align-items: center;
     opacity: 1;
-    height:60px;
+    height:40px;
     width:100%;
    
     background-color: #ffffff!important;
@@ -242,7 +254,7 @@ align-items: center;
 
 header {
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     background-color: #ffffff;
     width:100%;
     font-family: W3;
@@ -257,6 +269,6 @@ h3{
     font-family: 'W3';
     font-size: 25px;
     color: #000000;
-    margin-top:20px;
+    margin-top:0px;
  
 }
