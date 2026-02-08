@@ -2,91 +2,6 @@
     font-family: 'Nocturnal';
     src: url("../fonts/Nocturnal.otf") format("opentype");
 }
-@font-face {
-    font-family: 'W3';
-    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
-}
-
-
-
-
-
-
-
-.Zeile1{
-display: flex;
-justify-content: space-between;
-align-items: center;
-    opacity: 1;
-    height:40px;
-    width:100%;
-  
-    background-color: #ffffff!important;
-}
-
-.links {
-    position: flex;
-    margin-left: 25px;
-    font-size: 50px;
-
-  
-
-}
-.mitte {
-    position: flex;
-
-}
-.rechts {
-    position: flex;
-    margin-right:25px;
-    font-size: 50px;
-}
-
-header {
-    z-index: 9999;
-    position: absolute;
-    background-color: #ffffff;
-    width:100%;
-    font-family: W3;
-    top:0px;
-    left:0%;
-  
-
-
-}
-a{
-    text-decoration: none;
-    color: #000000;
-}
-h3{
-    font-family: 'W3';
-    font-size: 25px;
-    color: #000000;
-    margin-top:20px;
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -94,10 +9,10 @@ body {
     font-family: 'Consolas', monospace;
     background: #000000;
     color: #ffffff;
-    /* padding: 20px; */
+    padding: 0px;
     line-height: 1.6em;
     text-align: center;
-
+    margin: 0px;
 }
 
 p {
@@ -123,6 +38,66 @@ p {
 }
 
 
+
+
+.Zeile1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:100%;
+    color:#000000!important;
+    background-color: #ffffff!important;
+}
+
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: fixed;
+    background-color: #ffffff;
+    width:100%;
+    top: 0%;
+}
+h3{
+    font-family: 'W3';
+    font-size: 25px;
+    color: #000000;
+    margin-top:20px;
+ 
+}
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:'W3';
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
+@font-face {
+    font-family: 'W3';
+    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 .red1 { 
@@ -172,9 +147,7 @@ p {
 
 
 
-.blue {
-    color: #0b34b9;
-}
+
 
 .fat {
     font-weight: bold;  
@@ -235,8 +208,7 @@ p {
 
 .fontswitcher {
     font-family: url('../fonts/Nocturnal.otf');
-    padding-top: 100px;
-
+    padding: 90px;
 }
 
 
@@ -272,18 +244,20 @@ p {
 
 .popup {
     position: fixed;
-    width: 280px;
+    width: 180px;
     padding: 1px;
     background: #000;
     border: 1px solid #000000;
     color: white;
     display: none;
     z-index: 9999;
+
 }
 
 .popup img {
     width: 100%;
     display: block;
+
 }
 
 /* .popup .close-btn {
@@ -336,6 +310,7 @@ p {
 .tilted {
     transform: rotate(6deg) scale(1.02);
     transition: transform 0.35s ease-in-out;
+
 }
 
 
@@ -365,5 +340,42 @@ p {
     }
 }
 
+.morality-trigger {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.onclick1 {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
+.blue {
+    color: #0b34b9;
+    text-decoration: underline;
+}
+
+.popup2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+
+}
+
+.popup2.visible {
+    display: block;
+}
+
+.onclick2 {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.remove {
+    display: none;
+}
