@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(255, 255, 255) !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    font-family: 'Courier New', monospace;
+  }
+  
+  #output {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .generated-sentence {
+    margin: 10px 0;
+    line-height: 1.8;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive Schriftgröße */
+  }
+  
+  .word {
+    display: inline;
+    transition: all 0.3s;
+  }
+  
+  .word.subject {
+    color: #c41e3a;
+    /* font-weight: bold; */
+  }
+  
+  .word.verb {
+    color: #c41e3a;
+  }
+  
+  .word.object {
+    color: #c41e3a;
+  }
+  
+  .word.adjective {
+    color: #c41e3a;
+    font-style: italic;
+  }
+  
+  .word.punctuation {
+    color: #c41e3a;
+  }
+
+  .word.preposition {
+    color: #c41e3a;
+    font-size: 0.95em;
+  }
+  
+  .word {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #c41e3a;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive Button */
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background-color: #a01830;
+    transform: scale(1.05);
+  }
+
+.Zeile1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:100%;
+    color:#000000!important;
+    background-color: #ffffff!important;
+}
+
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: fixed;
+    background-color: #ffffff;
+    width:100%;
+    top: 0%;
+}
+h3{
+    font-family: W3;
+    font-size: 25px;
+    color: #000000;
+    margin-top:20px;
+ 
+}
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:W3;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
+@font-face {
+    font-family: W3;
+   src: url(../fonts/HiraginoSans-W3.otf) format(opentype);
+}

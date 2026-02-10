@@ -94,7 +94,7 @@ a {
 }
 @font-face {
     font-family: 'W3';
-    src: url('../../assets/fonts/HiraginoSans-W3.otf') format('opentype');
+    src: url('../media/HiraginoSans-W3.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

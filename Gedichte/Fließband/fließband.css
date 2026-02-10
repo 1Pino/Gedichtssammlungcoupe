@@ -3,7 +3,7 @@
     background-size: cover; */
     
     height: 100vh; /* Viewport-Höhe, nicht 12000px */
-    width: 1500px;
+    width: 100%;
     overflow: hidden; /* versteckt alles, was überläuft */
     position: relative;
     top:5%;

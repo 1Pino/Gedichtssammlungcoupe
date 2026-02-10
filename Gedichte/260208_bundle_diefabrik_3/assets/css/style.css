@@ -1,0 +1,226 @@
+/* Basis-Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    }
+    /* Overlay + Inhalt */
+    .content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(180, 180, 180);
+    padding: 2rem;
+    background-color: rgb(0, 0, 0); /* Schwarz */
+    }
+    .text {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgb(180, 180, 180); /* Grau */
+    font-size: 7rem;
+    line-height: 1.6;
+    }
+    .box {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    }
+
+
+    h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: rgb(180, 180, 180); /* Grau */
+    }
+
+
+    p {
+    font-size: 1.2rem;
+    }
+
+
+
+.Zeile1{
+position: fixed;
+top:0%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+    opacity: 1;
+    height:40px;
+    width:100%;
+   
+    background-color: #ffffff!important;
+}
+
+.links {
+    position: flex;
+    margin-left: 25px;
+    font-size: 50px;
+
+  
+
+}
+.mitte {
+    position: flex;
+
+}
+.rechts {
+    position: flex;
+    margin-right:25px;
+    font-size: 50px;
+}
+
+header {
+    z-index: 9999;
+    position: fixed;
+    background-color: #ffffff;
+    width:100%;
+    font-family: W3;
+    top:-25px;
+    font-size:25px;
+   
+  
+
+
+}
+h3{
+    font-family: 'W3';
+    font-size: 25px;
+    color: #000000;
+    margin-top:0px;
+ 
+}
+a {
+    text-align: justify;
+    font-size: 1em;
+    font-family:W3;
+    color: #373737;
+    text-decoration: none;
+    letter-spacing: 1px;
+    filter: blur(0px);
+}
+@font-face {
+    font-family: W3;
+    src: url('../media/HiraginoSans-W3.otf') format('truetype');
+}
+
+
+
+
+     #top-capture {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px; /* Noch größerer Bereich (war 400px) */
+        pointer-events: none;
+        z-index: 1000;
+        }
+
+
+    .captured-word {
+    position: fixed;
+    pointer-events: auto;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-out;
+    color: rgb(180, 180, 180) !important; /* WICHTIG: Explizit grau setzen */
+    }
+
+
+    /* Schweben / Wabern des gesamten Wortes */
+    .captured-word {
+    animation: floatWord 6s ease-in-out infinite;
+    will-change: transform;
+    }
+
+
+    /* Einzelne Buchstaben */
+    .captured-word .char {
+    display: inline-block;
+    animation: charFloat 3s ease-in-out infinite;
+    color: inherit; /* Farbe vom Parent erben */
+    }
+
+
+    /* Gesamtes Wort: leichtes Wabern */
+    @keyframes floatWord {
+        0% {
+    transform: translate(0, 0) rotate(var(--rot));
+        }
+        50% {
+    transform: translate(6px, -4px) rotate(var(--rot));
+        }
+        100% {
+    transform: translate(0, 0) rotate(var(--rot));
+        }
+    }
+
+
+    /* Buchstaben: Opacity + Mini-Bewegung */
+    @keyframes charFloat {
+        0% {
+    opacity: 0.4;
+    transform: translateY(0px);
+        }
+        50% {
+    opacity: 1;
+    transform: translateY(-3px);
+        }
+        100% {
+    opacity: 0.4;
+    transform: translateY(0px);
+        }
+    }
+    /* Rauch-Wörter */
+    .smoke-word {
+    animation: smokeFloat var(--floatTime) ease-in-out infinite;
+    filter: blur(0.2px);
+    opacity: 0.85;
+    }
+    /* Qualm-Bewegung */
+    @keyframes smokeFloat {
+        0% {
+    transform:
+    translate(0, 0)
+    rotate(var(--rot));
+    opacity: 0.3;
+        }
+        50% {
+    transform:
+    translate(var(--driftX), calc(var(--rise) * -1))
+    rotate(var(--rot));
+    opacity: 0.9;
+        }
+        100% {
+    transform:
+    translate(calc(var(--driftX) * -0.6), 0)
+    rotate(var(--rot));
+    opacity: 0.4;
+        }
+    }
+    /* Rauch-Atmen der Buchstaben */
+    .smoke-word .char {
+    display: inline-block;
+    animation: smokeChar ease-in-out infinite;
+    }
+    @keyframes smokeChar {
+        0% {
+    opacity: 0.2;
+    transform: translateY(2px);
+        }
+        50% {
+    opacity: 1;
+    transform: translateY(-4px);
+        }
+        100% {
+    opacity: 0.3;
+    transform: translateY(2px);
+        }
+    }
